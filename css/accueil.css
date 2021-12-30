@@ -2,32 +2,57 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto';
 }
+/*******header/ search-bar*******/
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 30px;
-    padding-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 5px;
 }
 header img {
     width: 180px;
     height: 30px
 }
-.search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.search-bar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #dfdfdf;
+}
+input {
+    border: none;
+    background-color: #dfdfdf;
+}
+/*********explore/ fontction**********/
+.explore {
+    padding: 50px 20px 50px;
+}
+.title-explore {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.button-explore {
+    margin-top: 30px;
+}
+.button-explore button {
+    padding: 15px 20px 15px;
+    border-radius: 50px;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #9356DC;
+}
+/********card restaurant************/
+.restaurants {
     background-color: #f2f2f2;
 }
-
 .card {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     overflow: hidden;
-    width:80%;
+    width:45%;
     min-width: 150px;
     margin: 15px;
     border-radius: 20px;
