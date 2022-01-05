@@ -4,6 +4,12 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
+h2 {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+}
 /*******header/ search-bar*******/
 header {
     display: flex;
@@ -20,35 +26,40 @@ header img {
     justify-content: center;
     gap: 20px;
     padding: 20px 20px 20px 0;
-    background-color: #f2f2f2;
+    background-color: #e7e6e6b4;
 }
 .search i {
     font-size:18px;
 }
-.search h2 {
-    font-size: 18px;
-    font-weight: 500;
-}
 /*********explore/ fontction**********/
 .explore {
-    padding: 50px 20px 50px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 40px 20px 60px;
+    background-color: #f3f3f3d7;
 }
-.title-explore {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 15px;
+.explore p {
+    font-size: 18px;
+    font-weight: 300;
 }
-.button-explore {
+.btn-explore {
     margin-top: 30px;
 }
-.button-explore button {
+.btn-explore button {
     padding: 15px 20px 15px;
     border-radius: 50px;
+    cursor: pointer;
     border: none;
+    box-shadow: 1px 3px 5px 2px rgb(201, 199, 199);
     font-size: 18px;
     font-weight: 400;
     color: #fff;
-    background-color: #9356DC;
+    background-image: linear-gradient( 175deg, #FF79DA, #9356DC 90%);
+    transition: transform 300ms;
+}
+.btn-explore button:hover {
+    transform: scale(1.05);
+    opacity: 1.2;
 }
 /********card restaurant************/
 .restaurants {
