@@ -1,11 +1,13 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
 }
 /*******header/ search-bar*******/
 header {
+    display: flex;
+    justify-content: center;
     padding-top: 25px;
     padding-bottom: 5px;
 }
@@ -13,14 +15,19 @@ header img {
     width: 180px;
     height: 30px
 }
-.search-bar {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #dfdfdf;
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 20px 20px 0;
+    background-color: #f2f2f2;
 }
-input {
-    border: none;
-    background-color: #dfdfdf;
+.search i {
+    font-size:18px;
+}
+.search h2 {
+    font-size: 18px;
+    font-weight: 500;
 }
 /*********explore/ fontction**********/
 .explore {

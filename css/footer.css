@@ -1,0 +1,14 @@
+footer {
+    padding: 20px 20px 30px;
+    background-color: rgb(58, 57, 57);
+    color: white;
+}
+footer h3 {
+    font-family: 'Shrikhand';
+    font-size:22px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+footer ul {
+    list-style: none;
+}
