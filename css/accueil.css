@@ -31,12 +31,16 @@ header img {
 .search i {
     font-size:18px;
 }
+.search h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
 /*********explore/ fontction**********/
 .explore {
     text-align: center;
-    margin-bottom: 50px;
     padding: 40px 20px 60px;
-    background-color: #f3f3f3d7;
+    background-color: #f6f6f6;
 }
 .explore p {
     font-size: 18px;
@@ -61,22 +65,86 @@ header img {
     transform: scale(1.05);
     opacity: 1.2;
 }
+.fonction {
+    counter-reset: list;
+    padding: 50px 20px 80px 40px;
+}
+.fonction ol {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    gap: 20px;
+    list-style: none;
+}
+.fonction i {
+    margin-right: 20px;
+}
+.fonction li {
+    position: relative;
+    flex-grow: 1;
+    width: 50%;
+    padding: 30px;
+    border-radius: 23px;
+    background-color: #f6f6f6;
+    box-shadow: 1px 3px 10px -1px rgb(228, 226, 226);
+    transition: transform 300ms;
+}
+.fonction li::before {
+    counter-increment: list;
+    content: counter(list);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -15px;
+    bottom: 25px;
+    border-radius: 50px;
+    color: white;
+    background-color: #9356DC;
+}
+.fonction li:hover {
+    transform: scale(1.01);
+}
 /********card restaurant************/
-.restaurants {
-    background-color: #f2f2f2;
+.menu {
+    padding: 50px 20px 80px;
+    background-color: #f6f6f6;
+}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 .card {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     overflow: hidden;
-    width:45%;
-    min-width: 150px;
-    margin: 15px;
+    width:100%;
+    min-width: 250px;
     border-radius: 20px;
     background: #fff;
+    box-shadow: 5px 5px 5px #e2e2e2;
 }
-
+.badge {
+    position: relative;
+}
+.badge::before {
+    content: "Nouveau";
+    font-weight: 500;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 15px;
+    right: 15px;
+    height: 35px;
+    width: 90px;
+    border-radius: 3px;
+    color: #128367;
+    background-color: #99E2D0;
+}
 .card img {
     display:flex;
     justify-content: center;
