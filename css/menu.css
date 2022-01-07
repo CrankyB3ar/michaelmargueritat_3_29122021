@@ -1,6 +1,47 @@
 h1 {
     font-family: 'Shrikhand', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
 }
 img {
     max-width: 100%;
+}
+
+.menu {
+    padding: 30px 20px 60px;
+    border-radius: 50px;
+    background-color: #f6f6f6;
+}
+.menu p {
+    color: rgb(87, 87, 87);
+}
+.menu__title {
+    position: relative;
+    margin-bottom: 30px;
+}
+.menu__title i {
+    position: absolute;
+    font-size: 25px;
+    top: 10px;
+    right: 25px;
+}
+.menu__box {
+    padding-bottom: 40px;
+}
+.menu__head {
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+}
+.menu__head p {
+    padding-bottom: 3px;
+}
+.menu__card {
+    padding: 10px 10px 10px;
+    margin-top: 15px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 10px -1px rgb(228, 226, 226);
+}
+.menu__card:hover {
+    transform: scale(1.02);
 }

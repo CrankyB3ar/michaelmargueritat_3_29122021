@@ -65,7 +65,7 @@
     padding: 30px;
     border-radius: 23px;
     background-color: #f6f6f6;
-    box-shadow: 1px 3px 10px -1px rgb(228, 226, 226);
+    box-shadow: 1px 5px 10px -1px rgb(228, 226, 226);
     transition: transform 300ms;
 }
 .fonction li::before {
