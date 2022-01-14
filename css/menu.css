@@ -24,6 +24,7 @@ img {
     font-size: 25px;
     top: 10px;
     right: 25px;
+    cursor: pointer;
 }
 .menu__box {
     padding-bottom: 40px;
