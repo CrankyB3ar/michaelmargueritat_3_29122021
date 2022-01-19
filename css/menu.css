@@ -11,27 +11,28 @@ img {
 }
 
 .menu {
-    margin-top: -50px;
+    display: flex;
+    margin-top: -60px;
     padding: 30px 20px 60px;
-    border-radius: 50px;
+    border-radius: 50px 50px 0 0;
     background-color: #f6f6f6;
     position: relative;
-    margin-bottom: 30px;
 }
 .menu p {
     color: rgb(87, 87, 87);
 }
 .menu__title {
-   
+    margin-bottom: 30px;
 }
 .menu__title i {
     position: absolute;
     font-size: 25px;
-    top: 10px;
-    right: 25px;
+    top: 38px;
+    right: 50px;
     cursor: pointer;
 }
 .menu__box {
+    width: 30%;
     padding-bottom: 40px;
 }
 .menu__head {
@@ -42,6 +43,7 @@ img {
     padding-bottom: 3px;
 }
 .menu__card {
+    display: flex;
     padding: 10px 10px 10px;
     margin-top: 15px;
     border-radius: 15px;
@@ -50,4 +52,8 @@ img {
 }
 .menu__card:hover {
     transform: scale(1.02);
+}
+.card__content {
+    display: flex;
+    flex-direction: column;
 }

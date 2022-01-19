@@ -36,19 +36,26 @@
     display: flex;
     flex-wrap: wrap;
     padding-top: 15px;
-    gap: 20px;
+    gap: 30px;
     list-style: none;
 }
 .fonction i {
+    color: gray;
+    font-size: 18px;
     margin-right: 20px;
 }
+.fonction :hover > i{
+    color: #9356DC;
+}
 .fonction li {
+    font-weight: bold;
     position: relative;
     flex-grow: 1;
     padding: 30px;
     border-radius: 23px;
     background-color: #f6f6f6;
     box-shadow: 1px 5px 10px -1px rgb(228, 226, 226);
+    cursor: pointer;
     transition: transform 300ms;
 }
 .fonction li::before {
@@ -66,12 +73,17 @@
     background-color: #9356DC;
 }
 .fonction li:hover {
+    opacity: 1;
+    background-color: #9256dc21;
     transform: scale(1.01);
 }
 /***********menu************/
 .menu {
     padding: 50px 20px 80px;
     background-color: #f6f6f6;
+}
+.menu h2 {
+    padding-bottom: 15px;
 }
 .menu__list {
     display: flex;
@@ -81,16 +93,18 @@
     gap: 20px;
 }
 .card {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
     overflow: hidden;
     width:100%;
     min-width:500px;
-    max-width: 600px;
+    max-width: 700px;
     border-radius: 15px;
     background: #fff;
     box-shadow: 5px 5px 5px #e2e2e2;
+    transition: transform 300ms;
+}
+.card:hover {
+    transform: scale(1.02)
+
 }
 .badge {
     position: relative;
@@ -132,5 +146,5 @@
     position: absolute;
     font-size: 30px;
     right: 25px;
-    top: 25px;
+    top: 10px;
 }
