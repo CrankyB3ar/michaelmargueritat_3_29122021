@@ -4,9 +4,8 @@ h1 {
     font-weight: normal;
 }
 img {
-    display: block;
     width: 100%;
-    height: 55vh;
+    height: 45vh;
     object-fit: cover;
 }
 
@@ -85,4 +84,10 @@ img {
 }
 .menu__card:hover > .mark {
     margin-right: 0;
+}
+.btn-cmd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
