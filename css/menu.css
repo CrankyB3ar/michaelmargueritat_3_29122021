@@ -11,7 +11,6 @@ img {
 }
 
 .menu {
-    display: flex;
     margin-top: -60px;
     padding: 30px 20px 60px;
     border-radius: 50px 50px 0 0;
@@ -31,9 +30,14 @@ img {
     right: 50px;
     cursor: pointer;
 }
+.menus {
+    display: flex;
+    align-items: top;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 .menu__box {
-    width: 30%;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
 }
 .menu__head {
     border-bottom: 3px solid #99E2D0;
@@ -44,7 +48,11 @@ img {
 }
 .menu__card {
     display: flex;
-    padding: 10px 10px 10px;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    min-width: 400px;
+    max-width: 400px;
     margin-top: 15px;
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
@@ -54,6 +62,27 @@ img {
     transform: scale(1.02);
 }
 .card__content {
+    padding: 10px;
     display: flex;
     flex-direction: column;
+}
+.price {
+    padding-right: 20px;
+    margin-left: auto;
+    font-weight: bold;
+}
+.mark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 22px;
+    width: 60px;
+    margin-right: -60px;
+    border-radius: 0 10px 10px 0;
+    background-color: #99E2D0;
+    transition: all 0.6s;
+}
+.menu__card:hover > .mark {
+    margin-right: 0;
 }
