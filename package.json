@@ -1,0 +1,22 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "P3 Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrankyB3ar/michaelmargueritat_3_29122021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrankyB3ar/michaelmargueritat_3_29122021/issues"
+  },
+  "homepage": "https://github.com/CrankyB3ar/michaelmargueritat_3_29122021#readme",
+  "devDependencies": {
+    "sass": "^1.49.0"
+  }
+}
