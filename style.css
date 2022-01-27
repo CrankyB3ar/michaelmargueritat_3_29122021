@@ -17,6 +17,85 @@ a {
   color: inherit;
 }
 
+.loader {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  animation: fade 400ms 2s forwards;
+  transform-origin: top;
+}
+.loader::before {
+  content: "ohmyfood";
+  font-family: Shrikhand;
+  font-size: 60px;
+}
+.loader i {
+  background-image: linear-gradient(175deg, #FF79DA, #9356DC 90%);
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes wave {
+  to {
+    transform: rotate(1);
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  box-shadow: 0 2px 2px 1px gray;
+}
+header img {
+  width: 180px;
+  height: 30px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 20px 20px 0;
+  background-color: #e7e6e6b4;
+}
+.search i {
+  font-size: 18px;
+}
+.search h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.explore {
+  text-align: center;
+  padding: 40px 20px 60px;
+  background-color: #f6f6f6;
+}
+.explore p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.btn-explore {
+  margin-top: 30px;
+}
+
 button {
   width: 240px;
   padding: 15px 20px 15px;
@@ -30,23 +109,89 @@ button {
   background-image: linear-gradient(175deg, #FF79DA, #9356DC 90%);
   transition: transform 300ms;
 }
-button :hover {
+
+button:hover {
   transform: scale(1.05);
   opacity: 1.2;
 }
 
-/***********header************/
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 25px;
-  padding-bottom: 15px;
-  box-shadow: 0 2px 2px 1px gray;
+.fonction {
+  counter-reset: list;
+  padding: 50px 20px 80px 40px;
 }
-header img {
-  width: 180px;
+.fonction ol {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  gap: 30px;
+  list-style: none;
+}
+.fonction li {
+  font-weight: bold;
+  position: relative;
+  flex-grow: 1;
+  padding: 30px;
+  border-radius: 23px;
+  background-color: #f6f6f6;
+  box-shadow: 1px 5px 10px -1px #e4e2e2;
+  cursor: pointer;
+  transition: transform 300ms;
+}
+.fonction i {
+  color: gray;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.fonction :hover > i {
+  color: #9356DC;
+}
+
+.fonction li::before {
+  counter-increment: list;
+  content: counter(list);
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 30px;
   height: 30px;
+  left: -15px;
+  bottom: 25px;
+  border-radius: 50px;
+  color: white;
+  background-color: #9356DC;
+}
+
+.fonction li:hover {
+  opacity: 1;
+  background-color: #9256dc21;
+  transform: scale(1.01);
+}
+
+footer {
+  padding: 30px 25px 30px;
+  background-color: #3a3939;
+  color: white;
+}
+footer h3 {
+  font-family: "Shrikhand";
+  font-size: 22px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+footer p {
+  padding-bottom: 10px;
+}
+
+.fa-utensils {
+  padding-right: 12px;
+  font-size: 14px;
+}
+
+.fa-hands-helping {
+  padding-right: 8px;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

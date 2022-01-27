@@ -1,0 +1,50 @@
+.fonction {
+    counter-reset: list;
+    padding: 50px 20px 80px 40px;
+    ol {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 15px;
+        gap: 30px;
+        list-style: none;
+    }
+    li {
+    font-weight: bold;
+    position: relative;
+    flex-grow: 1;
+    padding: 30px;
+    border-radius: 23px;
+    background-color: #f6f6f6;
+    box-shadow: 1px 5px 10px -1px rgb(228, 226, 226);
+    cursor: pointer;
+    transition: transform 300ms;
+    }
+    i {
+        color: gray;
+        font-size: 18px;
+        margin-right: 20px;
+    }
+}
+.fonction :hover > i{
+    color: #9356DC;
+}
+
+.fonction li::before {
+    counter-increment: list;
+    content: counter(list);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -15px;
+    bottom: 25px;
+    border-radius: 50px;
+    color: white;
+    background-color: #9356DC;
+}
+.fonction li:hover {
+    opacity: 1;
+    background-color: #9256dc21;
+    transform: scale(1.01);
+}
