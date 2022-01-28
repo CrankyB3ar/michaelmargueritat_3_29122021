@@ -1,10 +1,11 @@
-@import "./sass/main";
-@import "./sass/loader";
-@import "./sass/layout/header";
-@import "./sass/layout/search";
-@import "./sass/layout/explore";
+@import "./sass/base";
 @import "./sass/layout/btn";
-@import "./sass/layout/fctn";
-@import "./sass/layout/footer";
-
-
+@import "./sass/layout/icons";
+@import "./sass/loader";
+@import "./sass/layout/1header";
+@import "./sass/layout/2search";
+@import "./sass/layout/3explore";
+@import "./sass/layout/4fctn";
+@import "./sass/layout/5homepage";
+@import "./sass/layout/6footer";
+@import "./sass/layout/7menu";

@@ -9,7 +9,7 @@
     height: 100vh;
     inset: 0;
     z-index: 1;
-    animation: fade 400ms 2s forwards;
+    animation: fade 400ms 1s forwards;
     transform-origin: top;
     &::before {
         content: "ohmyfood";

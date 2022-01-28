@@ -7,26 +7,26 @@
         padding-top: 15px;
         gap: 30px;
         list-style: none;
-    }
-    li {
-    font-weight: bold;
-    position: relative;
-    flex-grow: 1;
-    padding: 30px;
-    border-radius: 23px;
-    background-color: #f6f6f6;
-    box-shadow: 1px 5px 10px -1px rgb(228, 226, 226);
-    cursor: pointer;
-    transition: transform 300ms;
+        li {
+        font-weight: bold;
+        position: relative;
+        flex-grow: 1;
+        padding: 30px;
+        border-radius: 23px;
+        background-color: #f6f6f6;
+        box-shadow: 1px 5px 10px -1px rgb(228, 226, 226);
+        cursor: pointer;
+        transition: transform 300ms;
+        }
     }
     i {
         color: gray;
         font-size: 18px;
         margin-right: 20px;
     }
-}
-.fonction :hover > i{
-    color: #9356DC;
+    :hover > i{
+        color: #9356DC;
+    }
 }
 
 .fonction li::before {

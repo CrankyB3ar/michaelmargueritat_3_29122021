@@ -2,6 +2,7 @@ footer {
     padding: 30px 25px 30px;
     background-color: rgb(58, 57, 57);
     color: white;
+    
     h3 {
         font-family: 'Shrikhand';
         font-size:22px;
@@ -11,6 +12,18 @@ footer {
     }
     p {
         padding-bottom: 10px;
+    }
+    @media screen and (min-width: 768px) {
+        .footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .footer-content {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        }  
     }
 }
 .fa-utensils {
