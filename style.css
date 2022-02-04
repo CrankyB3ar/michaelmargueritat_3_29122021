@@ -79,9 +79,7 @@ button:hover {
   z-index: 1;
   animation: fade 600ms ease-in-out 2.5s forwards;
 }
-.loader::before {
-  content: "ohmyfood";
-  color: black;
+.loader h2 {
   font-family: Shrikhand;
   font-size: 60px;
 }
