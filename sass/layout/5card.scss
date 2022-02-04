@@ -1,0 +1,75 @@
+.selection {
+    padding: 50px 20px 80px;
+    background-color: #f6f6f6;
+    h2 {
+        padding-bottom: 15px;
+        @media screen and (min-width: 760px) {
+                text-align: center;
+        }
+    }
+    .selection-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        @media screen and (min-width: 760px) {
+        }
+        .card {
+            width: 100%;
+            flex-grow: 1;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px #e2e2e2;
+            transition: transform 300ms;
+            @media screen and (min-width: 760px) {
+                width: 35%;
+            }
+            @media screen and (min-width: 992px) {
+                width: 20%;
+            }
+            img {
+                max-height: 220px;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+            }
+        }
+    }
+}
+
+.card:hover {
+    transform: scale(1.02)
+    
+}
+.card-detail {
+    position: relative;
+    h3 {
+        margin: 18px 0 5px 15px;
+    }
+    p {
+        margin-left: 15px;
+        margin-bottom: 18px;
+    }
+    i {
+        position: absolute;
+        font-size: 30px;
+        right: 25px;
+        top: 10px;
+    }
+}
+
+.badge {
+    position: relative;
+}
+.badge::after {
+    content: "Nouveau";
+    font-weight: 500;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    top: 15px;
+    right: 15px;
+    height: 35px;
+    width: 90px;
+    border-radius: 3px;
+    color: #128367;
+    background-color: #99E2D0;
+}

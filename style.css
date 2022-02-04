@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,7 +29,7 @@ button {
   font-weight: 400;
   color: #fff;
   background-image: linear-gradient(175deg, #FF79DA, #9356DC 90%);
-  transition: transform 300ms;
+  transition: transform 400ms;
 }
 
 button:hover {
@@ -36,7 +37,7 @@ button:hover {
   opacity: 0.8;
 }
 
-.card__content .fas {
+.card-detail .fas {
   color: transparent;
   background-image: linear-gradient(175deg, #FF79DA, #9356DC 90%);
   background-clip: text;
@@ -45,7 +46,7 @@ button:hover {
   transition: all 300ms;
 }
 
-.card__content .fas:hover {
+.card-detail .fas:hover {
   opacity: 1;
   transform: scale(1.1);
 }
@@ -65,39 +66,61 @@ button:hover {
 }
 
 .loader {
-  background-color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg, #FF79DA, #9356DC);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   position: fixed;
-  height: 100vh;
   inset: 0;
   z-index: 1;
-  animation: fade 400ms 1s forwards;
-  transform-origin: top;
+  animation: fade 600ms ease-in-out 2.5s forwards;
 }
 .loader::before {
   content: "ohmyfood";
+  color: black;
   font-family: Shrikhand;
   font-size: 60px;
 }
-.loader i {
-  background-image: linear-gradient(175deg, #FF79DA, #9356DC 90%);
+.loader::after {
+  content: "Découvrez des restaurants d'exception, séléctionnés par nos soins.";
+  color: black;
+  font-family: roboto;
+  font-size: 18px;
+  font-weight: 500;
+}
+.loader .loader-icons {
+  color: #fff;
+}
+.loader .loader-icons i {
+  transform: scale(0);
+  padding: 7px;
+}
+.loader .loader-icons :nth-child(1) {
+  animation: grow 1.5s linear infinite;
+}
+.loader .loader-icons :nth-child(2) {
+  animation: grow 1.5s 0.2s linear infinite;
+}
+.loader .loader-icons :nth-child(3) {
+  animation: grow 1.5s 0.4s linear infinite;
 }
 
 @keyframes fade {
   0% {
-    transform: scale(1);
+    opacity: 1;
   }
   100% {
-    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
   }
 }
-@keyframes wave {
-  to {
-    transform: rotate(1);
+@keyframes grow {
+  50% {
+    transform: scale(1);
   }
 }
 header {
@@ -154,13 +177,14 @@ header img {
 
 .fonction {
   counter-reset: list;
-  padding: 50px 20px 80px 40px;
+  padding: 50px 20px 70px 20px;
 }
 .fonction ol {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   padding-top: 15px;
+  padding-left: 20px;
   gap: 30px;
   list-style: none;
 }
@@ -208,9 +232,9 @@ header img {
   .fonction ol {
     flex-direction: row;
     justify-content: center;
-    gap: 50px;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    gap: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   .fonction ol li {
     padding: 50px;
@@ -220,32 +244,66 @@ header img {
   }
 }
 
-.menu {
+.selection {
   padding: 50px 20px 80px;
   background-color: #f6f6f6;
 }
-.menu h2 {
+.selection h2 {
   padding-bottom: 15px;
 }
-.menu .menu__list {
+@media screen and (min-width: 760px) {
+  .selection h2 {
+    text-align: center;
+  }
+}
+.selection .selection-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 20px;
 }
-.menu .card {
-  overflow: hidden;
+.selection .selection-list .card {
   width: 100%;
-  min-width: 500px;
-  max-width: 700px;
+  flex-grow: 1;
+  background-color: #fff;
   border-radius: 15px;
-  background: #fff;
   box-shadow: 5px 5px 5px #e2e2e2;
   transition: transform 300ms;
 }
-.menu .card:hover {
+@media screen and (min-width: 760px) {
+  .selection .selection-list .card {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .selection .selection-list .card {
+    width: 20%;
+  }
+}
+.selection .selection-list .card img {
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.card:hover {
   transform: scale(1.02);
+}
+
+.card-detail {
+  position: relative;
+}
+.card-detail h3 {
+  margin: 18px 0 5px 15px;
+}
+.card-detail p {
+  margin-left: 15px;
+  margin-bottom: 18px;
+}
+.card-detail i {
+  position: absolute;
+  font-size: 30px;
+  right: 25px;
+  top: 10px;
 }
 
 .badge {
@@ -265,33 +323,6 @@ header img {
   border-radius: 3px;
   color: #128367;
   background-color: #99E2D0;
-}
-
-.card img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  object-fit: cover;
-  width: 100%;
-  max-height: 200px;
-  border-radius: 15px 15px 0 0;
-}
-
-.card__content {
-  position: relative;
-}
-.card__content h3 {
-  margin: 18px 0 5px 15px;
-}
-.card__content p {
-  margin-left: 15px;
-  margin-bottom: 18px;
-}
-.card__content i {
-  position: absolute;
-  font-size: 30px;
-  right: 25px;
-  top: 10px;
 }
 
 footer {
@@ -340,7 +371,7 @@ h1 {
 
 img {
   width: 100%;
-  height: 45vh;
+  height: 40vh;
   object-fit: cover;
   object-position: center;
 }
