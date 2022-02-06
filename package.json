@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/CrankyB3ar/michaelmargueritat_3_29122021#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.2",
     "sass": "^1.49.0"
   }
 }
