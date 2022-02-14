@@ -34,12 +34,16 @@ img {
 }
 
 .menus {
-    display: flex;
-    flex-wrap: wrap;
     gap: 30px;
+    @media screen and (min-width: 760px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 }
 
 .menu__box {
+    flex-grow: 1;
     padding-bottom: 15px;
 }
 
@@ -53,19 +57,22 @@ img {
 
 .menu__card {
     display: flex;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
-    width: 100%;
-    min-width: 520px;
     margin-top: 15px;
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     box-shadow: 1px 5px 10px -1px rgb(228, 226, 226);
     transition: all 0.5s;
     animation: loadin 1s ease-in-out forwards;
-}
-.menu__card:hover {
-    transform: scale(1.02);
+    @media screen and (min-width: 760px) {
+        width: 420px;
+    }
+    @media screen and (min-width: 992px) {
+        width: 500px;
+    }
+
 }
 .card__content {
     gap:5px;

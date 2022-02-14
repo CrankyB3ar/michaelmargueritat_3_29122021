@@ -397,12 +397,18 @@ img {
 }
 
 .menus {
-  display: flex;
-  flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 760px) {
+  .menus {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 
 .menu__box {
+  flex-grow: 1;
   padding-bottom: 15px;
 }
 
@@ -416,10 +422,9 @@ img {
 
 .menu__card {
   display: flex;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 100%;
-  min-width: 520px;
   margin-top: 15px;
   border-radius: 15px;
   background-color: white;
@@ -427,9 +432,15 @@ img {
   transition: all 0.5s;
   animation: loadin 1s ease-in-out forwards;
 }
-
-.menu__card:hover {
-  transform: scale(1.02);
+@media screen and (min-width: 760px) {
+  .menu__card {
+    width: 420px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu__card {
+    width: 500px;
+  }
 }
 
 .card__content {
