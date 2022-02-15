@@ -434,7 +434,7 @@ img {
 }
 @media screen and (min-width: 760px) {
   .menu__card {
-    width: 420px;
+    width: 360px;
   }
 }
 @media screen and (min-width: 992px) {
